@@ -11,8 +11,8 @@ This project contains automated tests to verify live game schedules on the Novib
 2. **Installation**:
    ```bash
    # Clone the repository
-   git clone https://github.com/your-username/novibet-tests.git
-   cd novibet-tests
+   git clone https://github.com/oAmarilha/Novibet.git
+   cd Novibet
 
    # Install dependencies
    npm install
@@ -44,7 +44,7 @@ npx playwright test check_live_events.spec.ts
 This test:
 - Navigates to Novibet's live schedule page
 - Extracts information about scheduled games
-- Saves the data to an XML file (`jogos.xml`)
+- Saves the data to an XML file (`games_list.xml`)
 - The data includes:
   - Game time
   - Home team
@@ -64,14 +64,14 @@ This test:
   - `not_found`: Game not found on the betting page
 - Generates two XML files:
   - `game_statuses.xml`: Complete status of all games
-  - `delayed_or_dropped_games_gmt2.xml`: List of only delayed or canceled games, with times converted to GMT+2
+  - `delayed_or_dropped_games_gmt+2.xml`: List of only delayed or canceled games, with times converted to GMT+2
 
 ## Test Output
 
 The tests generate the following files:
-- `jogos.xml`: Initial list of scheduled games
+- `games_list.xml`: Initial list of scheduled games
 - `game_statuses.xml`: Updated status of all games
-- `delayed_or_dropped_games_gmt2.xml`: List of delayed or canceled games with times in GMT+2
+- `delayed_or_dropped_games_gmt+2.xml`: List of delayed or canceled games with times in GMT+2
 
 ## Notes
 
